@@ -24,10 +24,6 @@ main {
     align-content: center;
 }
 
-h2 {
-    text-align: center;
-}
-
 #h2_secundario{
     color: rgb(143, 143, 143);
     font-weight: 500;
@@ -78,6 +74,8 @@ canvas{
 }
 
 .grafica{
+    max-width: 800px;
+    max-height: 500px;
     padding: 5px;
     border: 1px black;
 }
