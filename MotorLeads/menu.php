@@ -60,7 +60,7 @@ $datos = str_replace('\"', " pulgadas", $datos);
 </head>
 <body>
 <div class='encabezado'>
-    <img src='images/pagina_principal.png' alt='Logo' class='logo'>
+    <img src='pagina_principal.png' alt='Logo' class='logo'>
 </div>
 <div class='principal'>
     <form name='APIForm' method='POST'>
@@ -90,7 +90,7 @@ $datos = str_replace('\"', " pulgadas", $datos);
                 <input name='color' type='text' id='color' size='40'></td>
             </tr>
             <tr>
-                <td><center><button type='button' style='font-family: Poppins; padding-left:'300px';' onClick='enviaDatos(JSON.stringify(".$datos."))'>Buscar</button></center></td>
+                <td><center><button type='button' style='font-family: Poppins; padding-left:'300px';' onClick='enviaDatos(JSON.stringify(".$datos."),3)'>Buscar</button></center></td>
             </tr>
         </table>
     </form>

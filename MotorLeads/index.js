@@ -8,9 +8,6 @@ function validar_formulario() {
     // Validar la longitud de la contraseña
     var contrasenaValida = contrasena.length >= 6 && contrasena.length <= 64;
 
-    console.log("Correo válido:", correoValido);
-    console.log("Contraseña válida:", contrasenaValida);
-
     if (!correoValido) {
         alert("Por favor ingresa una dirección de correo válida.");
         return false;
@@ -68,7 +65,6 @@ function desplegarDatos(datos, listaId,datosForm, elementosVisisblesPHP){
 
     for(let info of datos){
         if (info["version"]!=null){
-            console.log(info["version"]);
             ids.push(info["id"]);
             names.push(info["version"]);
 
@@ -76,7 +72,6 @@ function desplegarDatos(datos, listaId,datosForm, elementosVisisblesPHP){
             listItem.value = info["version"];
 
             lista.appendChild(listItem);
-            console.log(names);
         }
         else{
         ids.push(info["id"]);
@@ -167,9 +162,15 @@ function obtenerDatos(elementoForm,enlaceActualAPI){
     location.href = enlace;
 
 }
+function enviaDatosG(datos,meses,year,kilometraje){
+    datos = JSON.parse(datos);
+    urlHistoricos = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/vehicles/"+datos["vehicle_id"].toString()+"/pricings?filter[since]="+meses;
 
+    ventana = "http://localhost/MotorLeads/graficas.php?enlaceAPI="+urlHistoricos+"&anio="+year+"&kilometraje="+kilometraje;
+    
+    window.location.replace(ventana);
+}
 function enviaDatos(datos){
-    console.log(document.APIForm.km.value);
     if(document.APIForm.km.value=="" || document.APIForm.color.value==""){
         alert("Todos los campos deben contener información");
     }
@@ -179,12 +180,12 @@ function enviaDatos(datos){
     year = document.APIForm.years.value;
     kilometraje = document.APIForm.km.value;
 
-    console.log(year);
     for(let info of datos){
         if (info["version"]==aux){
             urlHistoricos = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/vehicles/"+info["id"].toString()+"/pricings?filter[since]=3";
-            ventana = "http://localhost/MotorLeads/graficas.php?enlaceAPI="+urlHistoricos+"&anio="+year+"&kilometraje="+kilometraje
-            console.log(ventana);
+
+            ventana = "http://localhost/MotorLeads/graficas.php?enlaceAPI="+urlHistoricos+"&anio="+year+"&kilometraje="+kilometraje;
+            
             window.location.replace(ventana);
             
         }
@@ -192,7 +193,71 @@ function enviaDatos(datos){
     
 }
 }
+function graficas(datos){
+    datos = JSON.parse(datos);
+    labels = [];
+    ventas =[];
+    promedio=[];
+    compra=[];
+    for (let i = datos["historic"].length - 1; i >= 0; i--){
 
+        labels.push(datos["historic"][i]["month_name"]);
+
+    }
+    for (let i = datos["historic"].length - 1; i >= 0; i--){
+
+        ventas.push(datos["historic"][i]["sale_price"]);
+
+    }
+    for (let i = datos["historic"].length - 1; i >= 0; i--){
+
+        promedio.push(datos["historic"][i]["medium_price"]);
+
+    }
+    for (let i = datos["historic"].length - 1; i >= 0; i--){
+
+        compra.push(datos["historic"][i]["purchase_price"]);
+
+    }
+
+    const ctx = document.getElementById('grafica').getContext('2d');
+const grafica = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Venta',
+            data: ventas,
+            fill: true,
+            backgroundColor: 'rgba(255, 99, 132, 0.1)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }, {
+            label: 'Medio',
+            data: promedio,
+            fill: true,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }, {
+            label: 'Compra',
+            data: compra,
+            fill: true,
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: false
+            }
+        }
+    }
+});
+
+}
 let camposFormulario = null;
 let ids = null;
 let names = null;
