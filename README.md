@@ -92,3 +92,22 @@ En el formulario el usuario podrá seleccionar las especificaciones del auto que
 **Gráfica**
 
 Para acceder a esta ventana es necesario llenar todos los campos del formulario, aquí el usuario podrá encontrar los datos históricos relacionados al auto el cual el usuario ha construido a partir del formulario en la ventana anterior. En esta ventana el usuario podrá encontrar distintos botones los cuales pueden aumentar o disminuir los datos históricos que se graficarán (botones **3M** para graficar histórico de 3 meses, **6M** para graficar histórico de 6 meses, **1A** para graficar históricos de 1 año y **2A** para graficar históricos de 2 años). Aquí la gráfica puede mostrar una pequeña ventana en caso de que el cursor del mouse este sobre alguno de los datos graficados, mostrando la información correspondiente para cada una de las lineas dibujadas. 
+
+---
+**Visualización**
+
+**Login**
+
+Al abrir la página, nos encontraremos con un inicio de sesión, el cual solo requiere de un correo válido y de una contraseña de entre 4 y 64 caracteres.
+
+<img width="1511" alt="image" src="https://github.com/MrEstebato/motorleads-project/assets/133794187/22dcb509-9b6b-40d2-b616-e82a01e4fdb2">
+
+
+
+**Formulario**
+
+Despues de realizar el inicio de sesión, se muestra un formulario en el que hay distintos campos por rellenar de manera secuencial, con excepción del color y el kilometraje.
+<img width="1495" alt="Captura de pantalla 2024-04-30 a la(s) 3 31 40 p m" src="https://github.com/MrEstebato/motorleads-project/assets/133794187/ba5002e7-6f75-4125-bb86-71de896b1130">
+
+
+
