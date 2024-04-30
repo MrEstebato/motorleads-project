@@ -12,13 +12,13 @@
             <div class="container">
             <header>
                     <button  class="button_menu">
-                        <img src="pagina_principal.png" alt="Página Principal">
+                        <img src="images/pagina_principal.png" alt="Página Principal">
                     </button>
                     <button class="button_menu" id="boton_usuario">
                         <table>
                             <tr>
                                 <td>
-                                    <img src="usuario.png" alt="Usuario" width="50px" height="auto" style="margin-right: 2px;">
+                                    <img src="images/usuario.png" alt="Usuario" width="50px" height="auto" style="margin-right: 2px;">
                                 </td>
                                 <td style="color: white;">
                                     Usuario

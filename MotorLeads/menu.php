@@ -60,7 +60,7 @@ $datos = str_replace('\"', " pulgadas", $datos);
 </head>
 <body>
 <div class='encabezado'>
-    <img src='pagina_principal.png' alt='Logo' class='logo'>
+    <img src='images/pagina_principal.png' alt='Logo' class='logo'>
 </div>
 <div class='principal'>
     <form name='APIForm' method='POST'>
