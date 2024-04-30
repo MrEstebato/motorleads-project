@@ -1,0 +1,166 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    height: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    align-content: center;
+}
+
+#h2_secundario{
+    color: rgb(143, 143, 143);
+    font-weight: 500;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+    font-weight: 500;
+    font-size: 11pt;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.valores {
+    display: flex;
+    flex-direction: row;
+}
+
+#actions{
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+#adicionales{
+    padding: 15px;
+    justify-content: center;
+}
+
+#estados{
+    flex-direction: column;
+    font-size: x-small;
+    font-weight: 800;
+}
+
+canvas{
+    border-radius: 3px;
+    width: 95%;
+    height: 95%;
+}
+
+.grafica{
+    width: 600;
+    height: 420;
+    resize: both;
+    padding: 5px;
+    border: 1px black;
+    border-radius: 10px;
+}
+
+.left-panel {
+    width: 70%;
+    flex: 1;
+    padding: 20px;
+    align-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.left-panel::-webkit-scrollbar{
+    display: none;
+}
+
+.right-panel {
+    max-width: 30%;
+    flex: 1;
+    padding: 20px;
+    align-content: center;
+}
+
+.separador{
+    vertical-align: center;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(72, 72, 72, 0.5);
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.button {
+    width: 320px;
+    background: linear-gradient(to bottom, #1c84e0, #000046);
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: 11pt;
+    font-weight: 800;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+.button_menu{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    position: static;
+}
+
+.button_menu:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#boton_usuario{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.b_action{
+    padding: 6px;
+    width: 40px;
+    max-height: min-content;
+    font-size: 9pt;
+    border-color: rgba(125, 125, 125, 0.868);
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.b_action:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
+}
