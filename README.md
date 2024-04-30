@@ -47,6 +47,39 @@ En tu navegador, visita http://localhost para ver si XAMPP está funcionando cor
 
 ---
 
+Para que el proyecto funcione de manera correcta, se debe colocar la carpeta del reto dentro de la carpeta **htdocs** de XAMPP, a continuación, se muestra como realizar esto:
+
+**Acceder a la Carpeta htdocs en XAMPP para Windows**
+- Ubicación predeterminada
+- La carpeta htdocs se encuentra generalmente en la ruta donde instalaste XAMPP. La ruta predeterminada suele ser:
+- C:\xampp\htdocs
+  
+**Acceder usando el Explorador de Archivos**
+- Abre el Explorador de Archivos de Windows.
+- Navega a la unidad donde instalaste XAMPP y abre la carpeta xampp.
+- Dentro de la carpeta xampp, encontrarás htdocs.
+- Aquí se debe colocar la carpeta del reto.
+
+
+
+**Acceder a la Carpeta htdocs en XAMPP para macOS**
+
+**Ubicación predeterminada**
+- En macOS, la carpeta htdocs se encuentra generalmente en:
+- /Applications/XAMPP/htdocs
+
+**Acceder usando Finder**
+- Abre Finder.
+- Utiliza la combinación de teclas Cmd + Shift + G para abrir la ventana de "Ir a la carpeta".
+- Escribe la ruta /Applications/XAMPP/htdocs y presiona Enter.
+
+
+**Crear y modificar archivos en ambos sistemas**
+- Puedes agregar tus proyectos web directamente en la carpeta htdocs. Si agregas una carpeta llamada miSitio, puedes acceder a ella escribiendo http://localhost/miSitio en tu navegador.
+
+
+---
+
 **Inicio de sesion**
 
 Para iniciar sesión, basta con abrir el archivo **index.html**, que te redireccionará hacia el sitio de inicio de sesión, por el momento, basta con ingresar una dirección de correo valida y una contraseña de entre 6-64 caracteres para poder avanzar. Es posible indicar si deseas que el sitio guarde tu contraseña, si la has olvidado o si deseas registrar una cuenta, aunque por el momento ninguno de estos campos tiene funcionalidad. Basta con llenar el primer campo de **usuario** con un texto que contenga el caracter '@' y para el campo de **contraseña** basta con llenar el campo con un mínimo de caracteres.
