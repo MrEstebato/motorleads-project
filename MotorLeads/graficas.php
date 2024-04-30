@@ -13,13 +13,13 @@
             <div class="container">
             <header>
                     <button  class="button_menu">
-                        <img src="pagina_principal.png" alt="Página Principal">
+                        <img src="images/pagina_principal.png" alt="Página Principal">
                     </button>
                     <button class="button_menu" id="boton_usuario">
                         <table>
                             <tr>
                                 <td>
-                                    <img src="usuario.png" alt="Usuario" width="50px" height="auto" style="margin-right: 2px;">
+                                    <img src="images/usuario.png" alt="Usuario" width="50px" height="auto" style="margin-right: 2px;">
                                 </td>
                                 <td style="color: white;">
                                     Usuario
@@ -44,38 +44,37 @@
                     $historicos = $datos->historic;
 
 
-                    function getImage($fabricante)
-            {
+                    function getImage($fabricante){
                 switch ($fabricante) {
                     case 'Toyota':
-                        $imagen = 'images/logo_toyota.png';
+                        return 'images/logo_toyota.png';
                         break;
                     case 'Chevrolet':
-                        $imagen = 'images/logo_chevrolet.png';
+                        return 'images/logo_chevrolet.png';
                         break;
                     case 'Ford':
-                        $imagen = 'images/logo_ford.png';
+                        return 'images/logo_ford.png';
                         break;
                     case 'Honda':
-                        $imagen = 'images/logo_honda.png';
+                        return 'images/logo_honda.png';
                         break;
                     case 'Hyundai':
-                        $imagen = 'images/logo_hyundai.png';
+                        return 'images/logo_hyundai.png';
                         break;
                     case 'Kia':
-                        $imagen = 'images/logo_kia.png';
+                        return 'images/logo_kia.png';
                         break;
                     case 'Mazda':
-                        $imagen = 'images/logo_mazda.png';
+                        return 'images/logo_mazda.png';
                         break;
                     case 'Nissan':
-                        $imagen = 'images/logo_nissan.png';
+                        return 'images/logo_nissan.png';
                         break;
                     case 'Volkswagen':
-                        $imagen = 'images/logo_volkswagen.png';
+                        return 'images/logo_volkswagen.png';
                         break;
                     default:
-                        $imagen = 'logo_not_found.png';
+                        return 'images/logo_not_found.png';
                 }
             }
 
@@ -86,7 +85,7 @@
                     <div class='left-panel'>
                     <div style='display: flex; padding-left: 30px;'>
                         <div style='padding-left: 40px; flex: 1; align-content: center;'>
-                        <img src='".getImage($make)."' alt='marcaAuto' width='55px' height='auto'>
+                        <img src='".getImage($make)."' alt='marcaAuto' width='160px' height='auto'>
                         </div>
                         <div class='separador'></div>
                         <div style='flex-direction: column; flex: 1; padding-left: 15px;'>
@@ -96,27 +95,27 @@
                     </div>
                     <div class='valores' id='adicionales'>
                         <div class='valores' id='estados'>
-                            <h3>Valor de Venta</h3>
-                            <b>".$historicos[0]->sale_price."</b>
-                            <p style='font-size: x-small; font-weight: 700;'>Cambio de un año</p>
-                            <b>".$datos->sale_price_percentage_variation."</b>
-                            <b>".$datos->sale_price_variation."</b>
+                            <h1>Valor de Venta</h1>
+                            <b style='font-size: 12pt'>".$historicos[0]->sale_price."</b>
+                            <p style='font-size: 15pt; font-weight: 700;'>Cambio de un año</p>
+                            <b style='font-size: 12pt'>".$datos->sale_price_percentage_variation."</b>
+                            <b style='font-size: 12pt'>".$datos->sale_price_variation."</b>
                         </div>
                         <div class='separador'></div>
                         <div class='valores' id='estados'>
-                            <h3>Valor medio</h3>
-                            <b>".$historicos[0]->medium_price."</b>
-                            <p style='font-size: x-small; font-weight: 700;'>Cambio de un año</p>
-                            <b>".$datos->medium_price_percentage_variation."</b>
-                            <b>".$datos->medium_price_variation."</b>
+                            <h1>Valor medio</h1>
+                            <b style='font-size: 12pt'>".$historicos[0]->medium_price."</b>
+                            <p style='font-size: 15pt; font-weight: 700;'>Cambio de un año</p>
+                            <b style='font-size: 12pt'>".$datos->medium_price_percentage_variation."</b>
+                            <b style='font-size: 12pt'>".$datos->medium_price_variation."</b>
                         </div>
                         <div class='separador'></div>
                         <div class='valores' id='estados'>
-                            <h3>Valor de compra</h3>
-                            <b>".$historicos[0]->purchase_price."</b>
-                            <p style='font-size: x-small; font-weight: 700;'>Cambio de un año</p>
-                            <b>".$datos->purchase_price_percentage_variation."</b>
-                            <b>".$datos->purchase_price_variation."</b>
+                            <h1>Valor de compra</h1>
+                            <b style='font-size: 12pt'>".$historicos[0]->purchase_price."</b>
+                            <p style='font-size: 15pt; font-weight: 700;'>Cambio de un año</p>
+                            <b style='font-size: 12pt'>".$datos->purchase_price_percentage_variation."</b>
+                            <b style='font-size: 12pt'>".$datos->purchase_price_variation."</b>
                         </div>
                     </div>
                     <div class='valores' id='actions'>
