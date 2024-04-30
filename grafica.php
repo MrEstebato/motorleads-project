@@ -33,7 +33,6 @@
 
                     //$url_form = $_GET[''];
                     //json_decode($url_form);
-
                     
                     $diccionario_general = API();
                     
@@ -147,7 +146,7 @@
                 ?>
                 <script>
                     function getButtonByName(nombreboton) {
-                        document.getElementById('form').getElementsByName(nombreboton);
+                        document.getElementById('form').getElementsByTagName(nombreboton);
                     }
 
                     function buildChart(canvas,dataset,months) {
@@ -228,23 +227,31 @@
                     }
                     
                     months = 0;
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        if (getButtonByName('3M')) {
-                            months=3
-                            $url_completa = $url_base+"vehicles/"+$vehicle_id+"pricings?filter[since]="+months;
-                        } else if (getButtonByName('6M')) {
-                            months=6;
-                            $url_completa = $url_base+"vehicles/"+$vehicle_id+"pricings?filter[since]="+months;
-                        } else if (getButtonByName('1A')) {
-                            months=12;
-                            $url_completa = $url_base+"vehicles/"+$vehicle_id+"pricings?filter[since]="+months;
-                        } else if (getButtonByName('2A')) {
-                            months=24;
-                            $url_completa = $url_base+"vehicles/"+$vehicle_id+"pricings?filter[since]="+months;
-                        } else {
-                            months = 1500;
-                            $url_completa = $url_base+"vehicles/"+$vehicle_id+"pricings?filter[since]="+months;
-                        }
+                    if (getButtonByName('3M')) {
+                        months=3;
+                        url_base = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/";
+                        url_completa = url_base+"vehicles/"+<?php echo $vehicle_id; ?>+"pricings?filter[since]="+months;
+                        fetch(url_completa);
+                    } else if (getButtonByName('6M')) {
+                        months=6;
+                        url_base = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/";
+                        url_completa = url_base+"vehicles/"+<?php echo $vehicle_id; ?>+"pricings?filter[since]="+months;
+                        fetch(url_completa);
+                    } else if (getButtonByName('1A')) {
+                        months=12;
+                        url_base = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/";
+                        url_completa = url_base+"vehicles/"+<?php echo $vehicle_id; ?>+"pricings?filter[since]="+months;
+                        fetch(url_completa);
+                    } else if (getButtonByName('2A')) {
+                        months=24;
+                        url_base = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/";
+                        url_completa = url_base+"vehicles/"+<?php echo $vehicle_id; ?>+"pricings?filter[since]="+months;
+                        fetch(url_completa);
+                    } else {
+                        months = 1500;
+                        url_base = "https://motorleads-api-d3e1b9991ce6.herokuapp.com/api/v1/";
+                        url_completa = url_base+"vehicles/"+<?php echo $vehicle_id; ?>+"pricings?filter[since]="+months;
+                        fetch(url_completa);
                     }
                 </script>
                 </main>
