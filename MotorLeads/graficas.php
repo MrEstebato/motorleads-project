@@ -47,31 +47,31 @@
             function getImage($fabricante)
             {
                 switch ($fabricante) {
-                    case 'toyota':
+                    case 'Toyota':
                         $imagen = 'images/logo_toyota.png';
                         break;
-                    case 'chevrolet':
+                    case 'Chevrolet':
                         $imagen = 'images/logo_chevrolet.png';
                         break;
-                    case 'ford':
+                    case 'Ford':
                         $imagen = 'images/logo_ford.png';
                         break;
-                    case 'honda':
+                    case 'Honda':
                         $imagen = 'images/logo_honda.png';
                         break;
-                    case 'hyundai':
+                    case 'Hyundai':
                         $imagen = 'images/logo_hyundai.png';
                         break;
-                    case 'kia':
+                    case 'Kia':
                         $imagen = 'images/logo_kia.png';
                         break;
-                    case 'mazda':
+                    case 'Mazda':
                         $imagen = 'images/logo_mazda.png';
                         break;
-                    case 'nissan':
+                    case 'Nissan':
                         $imagen = 'images/logo_nissan.png';
                         break;
-                    case 'volkswagen':
+                    case 'Volkswagen':
                         $imagen = 'images/logo_volkswagen.png';
                         break;
                     default:
